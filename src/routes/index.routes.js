@@ -2,7 +2,7 @@ import { Router } from 'express';
 import Task from '../models/Task';
 
 //Importing controllers
-import { renderTasks, createTasks, renderTaskEdit, updateTask, deleteTask, taskToggleDonde } from '../controllers/tasks.controllers';
+import { renderTasks, createTasks, renderTaskEdit, updateTask, deleteTask, taskToggleDone } from '../controllers/tasks.controllers';
 
 const router = Router();
 
@@ -19,6 +19,6 @@ router.post('/tasks/:id/edit', updateTask)
 router.get('/tasks/:id/delete', deleteTask);
 
 //Toogle: Done
-router.get('/tasks/:id/toggleDone', taskToggleDonde)
+router.get('/tasks/:id/toggleDone', taskToggleDone)
 
 export default router;
